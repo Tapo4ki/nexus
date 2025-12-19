@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cndjs.cloudfare.com">
+</head>
+<body>
+
+    <div id="login-screen" class="login-screen active">
+        <div class="login-container">
+            <div class="login-header">
+                <h1><i class="fas fa-graduation-cap"></i>Nexus College Innopolis</h1>
+                <p>System for the students</p>
+            </div>
+            <div class="login-form">
+                <h2>Вход в систему</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                        </label>
+                        <input type="email" id="email" placeholder="ivanov@innopolis.university" required>
+                        <div class="email-hint"></div>
+                    </div>
+                    <div class="input-group">
+                        <lavel for="password">
+                            <i class="fas fa-lock"></i>
+                        </lavel>
+                        <input type="password" id="password" placeholder="Введите пароль: " required>
+                        <div class="password-requirements">
+
+                        </div>
+                    </div>
+                    <div class="input-group checkbox">
+                        <input type="checkbox" id="remember">
+                        <label for="remember"> запомнить меня </label>
+                    </div>
+                    <button type="submit" class="login">
+                        <i class="fas fa-sign-in-alt"></i> войти
+                    </button>
+                    <div class="login-error" id="login-error"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="app" class="content" style="display: none;">
+        <main class="content-area">
+        <section id="schedule" class="screen">
+            <h1>Расписание пар</h1>
+            <p>Здесь будет расписание по группам</p>
+        </section>
+        <section id="sport" class="screen">
+            <h1>Спорт часы и секции</h1>
+            <p>Расписание секций и тренировок</p>
+        </section>
+        <section id="journal" class="screen">
+            <h1>Журнал с оценками по каждому предмету</h1>
+            <p>Здесь будут у вас оценки по группам также</p>
+        </section>
+        <section id="more" class="screen">
+            <h1>Больше</h1>
+            <p>Дополнительные опции и настройки</p>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="menu-item.active" onclick="ShowScreen('schedule', this)">
+            <i class="fas fa-calendar-day"></i>
+            <span>Расписание</span>
+        </div>
+        <div class="menu-item" onclick="ShowScreen('sport', this)">
+           <i class="fas fa-volleyball-ball"></i>
+            <span>Спорт</span>
+        </div>
+        <div class="menu-item" onclick="ShowScreen('journal', this)" >
+            <i class="fas fa-graduation-cap"></i>
+            <span>Журнал</span>
+        </div>
+        <div class="menu-item" onclick="ShowScreen('more', this)">
+            <i class="fas fa-bars"></i>
+            <span>Больше</span>
+        </div>
+    </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
